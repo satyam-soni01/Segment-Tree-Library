@@ -4,18 +4,19 @@ General purpose Segment Tree Library.
 
 1. Include SegmentTree.h
 
-2. To construct a segment tree you need to specify the following:
-   a. The datatype of array for which the tree is being constructed.
-   b. An array or vector for which the tree is to be constructed.
-   c. A value that can be used to fill the extra nodes of the tree.
-   d. a function combine that specifies how the result of left and right child of a node should be used to generate the value of current node.
+2. To construct a segment tree you need to specify the following:<br>
+   a. The datatype of array for which the tree is being constructed.<br>
+   b. An array or vector for which the tree is to be constructed.<br>
+   c. A value that can be used to fill the extra nodes of the tree.<br>
+   d. a function combine that specifies how the result of left and right child of a node<br>
+   should be used to generate the value of current node.
 
-3. Example usage:
-   int small(int x,int y){return min(x,y);}
+3. Example usage:<br>
+   int small(int x,int y){return min(x,y);}<br>
    SegmentTree < int > rangeMinQueries(dataVector,INT_MAX,small);
    
-   int sum(int x,int y){return x+y;}
+   int sum(int x,int y){return x+y;}<br>
    SegmentTree < int > rangeSumQueries(dataVector,0,sum);
    
-   long long product(long long x,long long y){return x*y;}
+   long long product(long long x,long long y){return x*y;}<br>
    SegmentTree < long long > rangeProductQueries(dataVector,1,product);
